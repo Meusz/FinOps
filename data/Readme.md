@@ -6,6 +6,6 @@
 
 · id: Representa un ID único de cada paciente.
 · diagnóstico: Indica el tipo de cáncer. Esta propiedad puede tomar los valores "M" (Maligno - Benigno) o "B" (Benigno - Maligno).
-· radio_medio, textura_media, perímetro_medio, área_media, suavidad_media, compacidad_media, concavidad_media, puntos_cóncavos_medios: Representa los valores medios de las características visuales del cáncer.-[P. Brna, “Prolog programming”](https://courses.cs.washington.edu/courses/cse341/03sp/brna.pdf)
+· radio_medio, textura_media, perímetro_medio, área_media, suavidad_media, compacidad_media, concavidad_media, puntos_cóncavos_medios: Representa los valores medios de las características visuales del cáncer.
 
 -[Breast Cancer SVM model(best)](https://www.kaggle.com/code/rashadrmammadov/breast-cancer-svm-model-best)
