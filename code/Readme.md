@@ -7,20 +7,35 @@ Este directorio contiene notebooks en Python y PySpark que implementan modelos d
 El directorio se estructura de la siguiente manera:
 
 /codigo
+
 │
+
 ├── /python
+
 │ ├── Ridge_Classifier_Python.ipynb
+
 │ ├── RandomForest_Classifier_Python.ipynb
+
 │ ├── XGBoost_Classifier_Python.ipynb
+
 │ ├── CrossValidation_Bootstrap_Python.ipynb
+
 │ └── README.md
+
 │
+
 ├── /pyspark
+
 │ ├── Ridge_Classifier_PySpark.ipynb
+
 │ ├── RandomForest_Classifier_PySpark.ipynb
+
 │ ├── XGBoost_Classifier_PySpark.ipynb
+
 │ ├── CrossValidation_Bootstrap_PySpark.ipynb
+
 │ └── README.md
+
 │
 
 ## Notebooks de Python
