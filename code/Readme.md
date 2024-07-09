@@ -1,54 +1,122 @@
-# FinOps: Optimización de Costos en la Computación en la Nube para Big Data e IA
-### Mateusz 2024
+# Directorio de Código
 
-## Introducción
+Este directorio contiene notebooks en Python y PySpark que implementan modelos de machine learning para el análisis del BoT-IoT Dataset. Los notebooks están organizados en dos categorías principales: **Python** y **PySpark**. A continuación se detalla el contenido de cada uno y la metodología utilizada.
 
-En la última década, la **computación en la nube** se ha convertido en una plataforma clave para las organizaciones, ofreciendo flexibilidad y reducción de costos en tecnología de la información (TI). Hoy en día, la nube no solo sirve para mejorar la agilidad empresarial sino también para acceder a capacidades avanzadas de infraestructura que de otro modo serían difíciles de desarrollar internamente. 
+## Contenido del Directorio
 
-En este contexto, el presente **Trabajo de Fin de Máster (TFM)** explora la implementación y gestión de grandes volúmenes de datos y modelos de inteligencia artificial (IA) en entornos de nube a través de la técnica emergente conocida como **FinOps**. 
+El directorio se estructura de la siguiente manera:
 
-**FinOps** integra conocimientos técnicos, financieros y operativos para optimizar los costos de infraestructura en la nube mientras se mantiene un alto rendimiento. El objetivo principal de este estudio fue diseñar e implementar una arquitectura de **big data** basada en **Apache Spark** y en **Python**, capaz de cargar, almacenar, procesar y analizar datos, evaluando su eficacia mediante configuraciones variadas de Spark Pools en **Azure Synapse Analytics** y comparándolas con una máquina virtual local.
+/codigo
+│
+├── /python
+│ ├── Ridge_Classifier_Python.ipynb
+│ ├── RandomForest_Classifier_Python.ipynb
+│ ├── XGBoost_Classifier_Python.ipynb
+│ ├── CrossValidation_Bootstrap_Python.ipynb
+│ └── README.md
+│
+├── /pyspark
+│ ├── Ridge_Classifier_PySpark.ipynb
+│ ├── RandomForest_Classifier_PySpark.ipynb
+│ ├── XGBoost_Classifier_PySpark.ipynb
+│ ├── CrossValidation_Bootstrap_PySpark.ipynb
+│ └── README.md
+│
 
-## Estructura del Repositorio
+## Notebooks de Python
 
-Este repositorio está organizado en dos directorios principales:
+### 1. Ridge_Classifier_Python.ipynb
 
-- **[data](https://github.com/Meusz/FinOps/tree/main/data)**: Contiene el dataset utilizado en el estudio. Este conjunto de datos es fundamental para las pruebas y análisis realizados en el trabajo.
+Este notebook implementa el modelo de **Ridge Classifier** utilizando `scikit-learn`. Se explora cómo ajustar el parámetro de regularización `alpha` para mejorar el rendimiento del modelo en la tarea de clasificación de tráfico de red.
 
-- **[code](https://github.com/Meusz/FinOps/tree/main/code)**: Incluye los códigos y scripts desarrollados para la implementación de la arquitectura de big data y los modelos de IA en Python. Aquí encontrarás el código fuente, los scripts de procesamiento de datos y los análisis realizados.
+**Tareas realizadas en este notebook**:
+- Preparación de datos y preprocesamiento.
+- Implementación del modelo Ridge Classifier.
+- Evaluación del modelo utilizando técnicas de **Cross-Validation** y **Bootstrap**.
 
-## Objetivos del TFM
+### 2. RandomForest_Classifier_Python.ipynb
 
-1. **Diseñar e Implementar una Arquitectura de Big Data**: Crear una infraestructura basada en Apache Spark para manejar grandes volúmenes de datos.
-2. **Evaluar Configuraciones de Spark Pools**: Comparar el rendimiento y costo de diferentes configuraciones en **Azure Synapse Analytics** frente a una máquina virtual local.
-3. **Desarrollar Modelos de Inteligencia Artificial**: Implementar y probar modelos de IA en Python para el análisis de datos.
-4. **Optimización de Costos mediante FinOps**: Investigar cómo las prácticas FinOps pueden equilibrar la innovación tecnológica con la eficiencia financiera en la nube.
+Este notebook implementa el modelo de **Random Forest Classifier** con `scikit-learn`. Se exploran diferentes hiperparámetros, como el número de árboles y la profundidad máxima, para optimizar el modelo.
 
-## Resultados
+**Tareas realizadas en este notebook**:
+- Preparación de datos y preprocesamiento.
+- Implementación del modelo Random Forest Classifier.
+- Evaluación del modelo utilizando **Cross-Validation** y **Bootstrap**.
 
-El estudio demostró que la arquitectura diseñada es:
+### 3. XGBoost_Classifier_Python.ipynb
 
-- **Altamente adaptable** a diferentes entornos.
-- **Escalable** para manejar grandes volúmenes de datos.
-- **Eficiente** con tiempos de procesamiento aceptables que mejoran con la adición de nodos.
+Este notebook implementa el modelo de **XGBoost Classifier** utilizando la biblioteca `xgboost`. Se ajustan parámetros como la tasa de aprendizaje y el número de árboles para maximizar el rendimiento del modelo.
 
-Las pruebas de rendimiento confirmaron que las configuraciones de nodos en Azure Synapse Analytics ofrecen un **balance** entre costo y rendimiento, proporcionando insights valiosos sobre el comportamiento del sistema.
+**Tareas realizadas en este notebook**:
+- Preparación de datos y preprocesamiento.
+- Implementación del modelo XGBoost Classifier.
+- Evaluación del modelo utilizando **Cross-Validation** y **Bootstrap**.
 
-## Futuro Trabajo
+### 4. CrossValidation_Bootstrap_Python.ipynb
 
-A partir de los resultados obtenidos, se proponen varias líneas de trabajo futuro, que incluyen:
+Este notebook proporciona una implementación de técnicas de evaluación **Cross-Validation** y **Bootstrap** aplicadas a los modelos de machine learning. Se comparan los resultados obtenidos con los diferentes métodos de evaluación.
 
-- **Optimización Avanzada de Costos**: Explorar prácticas FinOps para mejorar aún más la eficiencia financiera.
-- **Exploración de Proveedores de Nube Alternativos**: Evaluar otras opciones de infraestructura en la nube.
-- **Ampliación de Conjuntos de Datos y Modelos**: Extender los datos y modelos utilizados en el estudio.
-- **Evaluación del Impacto Ambiental**: Estudiar las implicaciones medioambientales de las soluciones en la nube.
-- **Desarrollo de Herramientas de Gestión FinOps**: Crear herramientas para la gestión efectiva de FinOps en las organizaciones.
+**Tareas realizadas en este notebook**:
+- Implementación de técnicas de **Cross-Validation**.
+- Implementación de técnicas de **Bootstrap**.
+- Comparación de resultados entre las diferentes técnicas de evaluación.
 
-## Cómo Empezar
+## Notebooks de PySpark
 
-Para comenzar a trabajar con este proyecto, sigue estos pasos:
+### 1. Ridge_Classifier_PySpark.ipynb
 
-1. **Clona el Repositorio:**
-   ```bash
-   git clone https://github.com/Meusz/FinOps.git
+Este notebook implementa el modelo de **Ridge Classifier** utilizando PySpark y `pyspark.ml`. Se explora cómo ajustar el parámetro de regularización `regParam` para mejorar el rendimiento del modelo en la tarea de clasificación.
 
+**Tareas realizadas en este notebook**:
+- Preparación de datos utilizando RDDs y `DataFrames`.
+- Implementación del modelo Ridge Classifier en PySpark.
+- Evaluación del modelo utilizando técnicas de **Cross-Validation** y **Bootstrap**.
+
+### 2. RandomForest_Classifier_PySpark.ipynb
+
+Este notebook implementa el modelo de **Random Forest Classifier** utilizando PySpark y `pyspark.ml`. Se exploran diferentes hiperparámetros como el número de árboles y la profundidad máxima.
+
+**Tareas realizadas en este notebook**:
+- Preparación de datos utilizando RDDs y `DataFrames`.
+- Implementación del modelo Random Forest Classifier en PySpark.
+- Evaluación del modelo utilizando **Cross-Validation** y **Bootstrap**.
+
+### 3. XGBoost_Classifier_PySpark.ipynb
+
+Este notebook implementa el modelo de **XGBoost Classifier** en un entorno PySpark utilizando la biblioteca `sparkxgb`. Se ajustan parámetros como la tasa de aprendizaje y el número de árboles.
+
+**Tareas realizadas en este notebook**:
+- Preparación de datos utilizando RDDs y `DataFrames`.
+- Implementación del modelo XGBoost Classifier en PySpark.
+- Evaluación del modelo utilizando **Cross-Validation** y **Bootstrap**.
+
+### 4. CrossValidation_Bootstrap_PySpark.ipynb
+
+Este notebook proporciona una implementación de técnicas de evaluación **Cross-Validation** y **Bootstrap** en un entorno PySpark. Se comparan los resultados obtenidos con los diferentes métodos de evaluación.
+
+**Tareas realizadas en este notebook**:
+- Implementación de técnicas de **Cross-Validation** en PySpark.
+- Implementación de técnicas de **Bootstrap** en PySpark.
+- Comparación de resultados entre las diferentes técnicas de evaluación.
+
+## Instalación
+
+Para ejecutar los notebooks de Python, necesitas instalar las siguientes bibliotecas:
+
+```bash
+pip install pandas scikit-learn xgboost
+
+
+
+### Detalles del contenido del `README.md`
+
+- **Contenido del Directorio**: Estructura del directorio con los notebooks organizados en carpetas para Python y PySpark.
+- **Notebooks de Python**: Descripción de los notebooks que utilizan `scikit-learn` para diferentes modelos y técnicas de evaluación.
+- **Notebooks de PySpark**: Descripción de los notebooks que utilizan `pyspark` para diferentes modelos y técnicas de evaluación.
+- **Instalación**: Instrucciones para instalar las bibliotecas necesarias para ejecutar los notebooks.
+- **Ejecución de los Notebooks**: Pasos para clonar el repositorio, navegar al directorio de código, y abrir los notebooks.
+- **Contribuciones**: Enlace a las directrices para contribuir al proyecto.
+- **Licencia**: Información sobre la licencia del proyecto.
+- **Contacto**: Información de contacto para más detalles.
+
+Este `README.md` proporciona toda la información necesaria para que los usuarios entiendan los notebooks, instalen las dependencias y ejecuten el código. Si tienes más detalles específicos que quieras añadir, no dudes en decírmelo.
